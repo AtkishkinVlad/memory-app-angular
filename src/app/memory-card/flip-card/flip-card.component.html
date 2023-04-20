@@ -1,0 +1,35 @@
+<tui-accordion-item>
+  <div class="card">
+    <button class="cross" (click)="onClose(word)">X</button>
+    <input
+      type="checkbox"
+      id="{{ word.value }}"
+      class="more"
+      aria-hidden="true"
+    />
+    <div class="content">
+      <div
+        class="front"
+      >
+        <div class="inner">
+          <h2>{{ word.value }}</h2>
+          <label for="{{ word.value }}" class="button" aria-hidden="true">
+            Посмотреть значение слова
+          </label>
+        </div>
+      </div>
+      <div class="back">
+        <div class="description">
+          <h3 class="description__title">
+            {{ word.meaning }}
+          </h3>
+        </div>
+        <label for="{{ word.value }}" class="button return" aria-hidden="true">
+          <i class="fas fa-arrow-left">
+            Закрыть
+          </i>
+        </label>
+      </div>
+    </div>
+  </div>
+</tui-accordion-item>

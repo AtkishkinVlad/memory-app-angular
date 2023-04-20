@@ -1,0 +1,31 @@
+<form class="form" [formGroup]="form" (submit)="submit()">
+  <h3>
+    Добавьте новое слово
+  </h3>
+
+  <div class="container">
+    <div class="tui-form__row">
+      <tui-input tuiTextfieldSize="s" formControlName="value">
+        Слово
+      </tui-input>
+    </div>
+
+    <div class="tui-form__row">
+      <tui-input tuiTextfieldSize="s" formControlName="meaning">
+        Его значение
+      </tui-input>
+    </div>
+
+    <div class="tui-form__row center">
+      <button
+        [disabled]="form.invalid"
+        tuiButton
+        class="tui-form__button"
+        size="s"
+        type="submit"
+      >
+        Добавить
+      </button>
+    </div>
+  </div>
+</form>
