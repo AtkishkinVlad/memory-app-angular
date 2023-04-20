@@ -19,9 +19,11 @@ export class AddFormComponent {
 
   submit(): void {
     words.push({
-      value: String(this.form.get('word')?.value),
+      value: String(this.form.get('value')?.value),
       meaning: String(this.form.get('meaning')?.value)
     });
+
+    console.log({ words })
 
     this.form.reset();
   }
