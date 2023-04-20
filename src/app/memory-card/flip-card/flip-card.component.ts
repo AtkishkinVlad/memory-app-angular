@@ -11,6 +11,8 @@ export class FlipCardComponent {
   @Input()
   word!: Word;
 
+  uuid = crypto.randomUUID();
+
   onClose(word: Word) {
     const value = word.value;
     const index = words.map(x => x.value).indexOf(value);

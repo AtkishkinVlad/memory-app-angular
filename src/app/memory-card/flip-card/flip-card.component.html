@@ -2,20 +2,20 @@
   <button class="cross" (click)="onClose(word)">X</button>
   <input
     type="checkbox"
-    id="{{ word.value }}"
+    id="{{ word.value + this.uuid }}"
     class="more"
     aria-hidden="true"
   />
   <div class="content">
     <div class="front">
-      <label for="{{ word.value }}" class="button return" aria-hidden="true">
+      <label for="{{ word.value + this.uuid }}" class="button return" aria-hidden="true">
         <div class="inner">
           <h3>{{ word.value }}</h3>
         </div>
       </label>
     </div>
     <div class="back">
-      <label for="{{ word.value }}" class="button return" aria-hidden="true">
+      <label for="{{ word.value + this.uuid }}" class="button return" aria-hidden="true">
         <div class="description">
           <h3 class="description__title">
             {{ word.meaning }}

@@ -23,8 +23,6 @@ export class AddFormComponent {
       meaning: String(this.form.get('meaning')?.value)
     });
 
-    console.log({ words })
-
     this.form.reset();
   }
 }
